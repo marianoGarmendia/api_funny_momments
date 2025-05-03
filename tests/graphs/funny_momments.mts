@@ -77,7 +77,7 @@ const ENVIAR_WHATSAPP = tool(
     }
     console.log("Mensaje enviado por WhatsApp:", response);
     
-    return "Pronto recibirás un mensaje por WhatsApp con la información que solicitaste. Gracias por elegir Funny momments";
+    return "Pronto recibirás un mensaje por WhatsApp con la información que solicitaste. Gracias por elegir Funny moments";
   },
 
   {
