@@ -1,0 +1,79 @@
+{
+  "name": "@langchain/langgraph-api",
+  "version": "0.0.23",
+  "type": "module",
+  "engines": {
+    "node": "^18.19.0 || >=20.16.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:langchain-ai/langgraphjs-api.git"
+  },
+  "scripts": {
+    "clean": "npx -y bun scripts/clean.mjs",
+    "build": "tsc",
+    "dev": "tsx ./tests/utils.server.mts --dev",
+    "start": "tsx ./tests/utils.server.mts --dev",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:parser": "vitest run ./tests/parser.test.mts --testTimeout 15000",
+    "test:api": "npx -y bun scripts/test.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@babel/code-frame": "^7.26.2",
+    "@hono/node-server": "^1.12.0",
+    "@hono/zod-validator": "^0.2.2",
+    "@langchain/community": "^0.3.40",
+    "@langchain/langgraph-ui": "^0.0.23",
+    "@langchain/openai": "^0.5.5",
+    "@langchain/tavily": "^0.1.1",
+    "@pinecone-database/pinecone": "^5.1.2",
+    "@types/json-schema": "^7.0.15",
+    "@types/lodash-es": "^4.17.12",
+    "@typescript/vfs": "^1.6.0",
+    "dedent": "^1.5.3",
+    "dotenv": "^16.4.7",
+    "exit-hook": "^4.0.0",
+    "gpt-3-encoder": "^1.1.4",
+    "hono": "^4.5.4",
+    "langsmith": "^0.2.15",
+    "lodash-es": "^4.17.21",
+    "open": "^10.1.0",
+    "stacktrace-parser": "^0.1.10",
+    "superjson": "^2.2.2",
+    "tsx": "^4.19.3",
+    "uuid": "^10.0.0",
+    "winston": "^3.17.0",
+    "winston-console-format": "^1.0.8",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "@langchain/core": "^0.3.42",
+    "@langchain/langgraph": "^0.2.57",
+    "@langchain/langgraph-checkpoint": "^0.0.16",
+    "@langchain/langgraph-sdk": "^0.0.67",
+    "typescript": "^5.5.4"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/langgraph-sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@langchain/langgraph-sdk": "^0.0.67",
+    "@types/babel__code-frame": "^7.0.6",
+    "@types/node": "^22.2.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@types/uuid": "^10.0.0",
+    "jose": "^6.0.10",
+    "postgres": "^3.4.5",
+    "prettier": "^3.3.3",
+    "vitest": "^3.0.5"
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
+}

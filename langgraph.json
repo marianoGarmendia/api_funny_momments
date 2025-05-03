@@ -1,0 +1,8 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+      "agent": "./tests/graphs/naturgy.mts:workflow",
+      "inmo_agent": "./tests/graphs/inmo.mts:workflow"
+    },
+    "env": ".env"
+  }
